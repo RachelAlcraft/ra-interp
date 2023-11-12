@@ -1,14 +1,8 @@
 
-https://packaging.python.org/tutorials/packaging-projects/
+### Publish from github actions
 
-Installs needed
-```
-python -m pip install --upgrade build
-pip install twine
-```
-1) In the directory . open a command prompt (eg in vscode)
-2) Increment the version in setup.cfg in the project IMPORTANT
-3) cmd: python -m build
-4) cmd: python -m twine upload --repository pypi dist/*
-The credentials are stored in a settings file
-5) Check success https://pypi.org/manage/projects/
+https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/#:~:text=The%20publish.,create%20an%20unscoped%20API%20token.
+
+1) Set up as per above, with a publish.yml in workflows folder set to publish with an api secret.
+2) Then when you make a release it will publish automatically.
+3) Check success https://pypi.org/manage/projects/
